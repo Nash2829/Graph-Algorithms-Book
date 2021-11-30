@@ -1,0 +1,279 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}, fontsize=\small}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\author{}
+\date{}
+
+% manual margin -- starts here --- 
+\addtolength{\oddsidemargin}{-.41in}
+\addtolength{\evensidemargin}{-.41in}
+\addtolength{\textwidth}{0.82in}
+
+\addtolength{\topmargin}{-.55in}
+\addtolength{\textheight}{1.10in}
+% manual margin --ends here --
+
+\begin{document}
+
+\hypertarget{dijkstra}{%
+\section{\texorpdfstring{Dijkstra }{Dijkstra }}\label{dijkstra}}
+
+Given a directed or undirected weighted graph with \(V\) vertices and
+\(E\) edges with no negative cycles, the problem is to find the lengths
+of the shortest paths from a starting vertex \(s\) to all other
+vertices, and find the shortest paths themselves. This problem is called
+\emph{single-source shortest paths problem}.
+
+We maintain an array \(d[]\) where for every vertex \(u\), \(d[u]\) is
+the length of the shortest path from \(s\) to \(u\). We initialize
+\(d[u] = \infty \ \forall \ u \in V - \{s\}\) where \(\infty\) is some
+large number. Also, \(d[s] = 0\).
+
+We also maintain an array \(p[]\) which keeps track of immediate
+predecessor, i.e., \(p[v]\) would store the vertex which is predecessor
+of \(v\). This array would be helpful in restoring the path from source
+vertex \(s\) to any other vertex \(t\).
+
+The algorithm runs for almost \(V\) iterations. \\
+At each iteration, an unmarked vertex \(u\) with least value \(d[u]\) is
+extracted and marked.\\
+From vertex \(u\), relaxations are performed on all vertices adjacent to
+it. That is, for each adjacent vertex \(v\), we minimize the value of
+\(d[v]\). If the current edge length is \(len\), then
+
+\[d[v] = min(d[v], len + d[u])\]
+
+On every relaxation we perform, we update the value of \(p[v]\) as:
+
+\[p[v] = u\]
+
+The time for extracting an unmarked vertex \(u\) with least value
+\(d[u]\) is naively \(O(V)\) if we just loop through all vertices. The
+step of extraction is performed \(V\) times for every vertex. Since the
+time for relaxation of an edge is simply \(O(1)\) and we perform the
+step of relaxation \(E\) times for every edge. The time complexity of
+this algorithm would be \(O(V^2 + E)\).
+
+We can use data structures such as AVL trees, binary heap, etc. to solve
+this problem of extracting minimum in \(O(\log V)\). For example, we can
+make a compromise and use a binary heap for both operations of
+extraction (in \(O(\log V)\)) and updating the value after relaxation
+(in \(O(\log V)\)). \\
+Then, the total complexity would be,\\
+\(O(V \log V + E \log V) = O((V + E) \log V) \approx O(E \log V)\).
+
+Here is an implementation for the algorithm using the \texttt{graph.hpp}
+header introduced before. The file \texttt{dijkstra.hpp} has
+\texttt{struct\ Dijkstra} inherited publicly from
+\texttt{class\ weightedGraph} in \texttt{graph.hpp}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{// dijkstra.hpp}
+
+\PreprocessorTok{\#ifndef DIJKSTRA\_HPP}
+\PreprocessorTok{\#define DIJKSTRA\_HPP}
+
+\PreprocessorTok{\#include }\ImportTok{"graph.hpp"}
+
+\KeywordTok{struct}\NormalTok{ Dijkstra : }\KeywordTok{public}\NormalTok{ weightedGraph \{}
+    \KeywordTok{using}\NormalTok{ ll = }\DataTypeTok{long} \DataTypeTok{long} \DataTypeTok{int}\NormalTok{;}
+    \AttributeTok{const}\NormalTok{ ll INF = }\BaseNTok{0x3f3f3f3f3f3f3f3f}\NormalTok{;}
+
+\NormalTok{    ll *d;}
+\NormalTok{    Vertex *p;}
+
+    \CommentTok{/**}
+\CommentTok{     * }\AnnotationTok{@brief}\CommentTok{ Constructs a new Dijkstra object.}
+\CommentTok{     * }
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{\_V}\CommentTok{ Number of vertices.}
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{\_directed}\CommentTok{ Default = false. specify true if graph is directed.}
+\CommentTok{     */}
+\NormalTok{    Dijkstra(Vertex \_V, }\DataTypeTok{bool}\NormalTok{ \_directed = }\KeywordTok{false}\NormalTok{) : weightedGraph(\_V, \_directed) \{}
+\NormalTok{        d = }\KeywordTok{new}\NormalTok{ ll[V + }\DecValTok{1}\NormalTok{]();}
+\NormalTok{        p = }\KeywordTok{new}\NormalTok{ Vertex[V + }\DecValTok{1}\NormalTok{]();}
+\NormalTok{    \}}
+
+    \CommentTok{/**}
+\CommentTok{     * }\AnnotationTok{@brief}\CommentTok{ Constructs a new Dijkstra object from a weighted Graph object.}
+\CommentTok{     * }
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{G}\CommentTok{ The weighted Graph Object to be copied.}
+\CommentTok{     */}
+\NormalTok{    Dijkstra(weightedGraph G) : weightedGraph(G) \{}
+\NormalTok{        d = }\KeywordTok{new}\NormalTok{ ll[V + }\DecValTok{1}\NormalTok{];}
+\NormalTok{        p = }\KeywordTok{new}\NormalTok{ Vertex[V + }\DecValTok{1}\NormalTok{]();}
+\NormalTok{    \}}
+
+    \CommentTok{/**}
+\CommentTok{     * }\AnnotationTok{@brief}\CommentTok{ Constructs a new Dijkstra object from an old one. }
+\CommentTok{     * It calls the weightedGraph copy constructor.}
+\CommentTok{     * }
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{copy}\CommentTok{ The old Dijkstra object to be copied.}
+\CommentTok{     */}
+\NormalTok{    Dijkstra(}\AttributeTok{const}\NormalTok{ Dijkstra \&copy) : weightedGraph(copy) \{}
+\NormalTok{        memcpy(d, copy.d, }\KeywordTok{sizeof}\NormalTok{(ll) * (V + }\DecValTok{1}\NormalTok{));}
+\NormalTok{    \}}
+    
+
+    \CommentTok{/**}
+\CommentTok{     * }\AnnotationTok{@brief}\CommentTok{ Destroys the Dijkstra object.}
+\CommentTok{     * }
+\CommentTok{     */}
+\NormalTok{    \textasciitilde{}Dijkstra() \{}
+        \KeywordTok{delete}\NormalTok{ []d;}
+\NormalTok{    \}}
+
+    \CommentTok{/**}
+\CommentTok{     * }\AnnotationTok{@brief}\CommentTok{ finds the lengths of shortest paths from the source vertex to all }
+\CommentTok{     * vertices and stores in Dijkstra::d[].}
+\CommentTok{     * }
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{s}\CommentTok{ Default = 1. The source vertex.}
+\CommentTok{     */}
+    \DataTypeTok{void}\NormalTok{ solveShortestPaths(Vertex s = }\DecValTok{1}\NormalTok{) \{}
+        \KeywordTok{using}\NormalTok{ length = }\BuiltInTok{std::}\NormalTok{pair\textless{}ll, Vertex\textgreater{};}
+        \BuiltInTok{std::}\NormalTok{priority\_queue\textless{}length, }\BuiltInTok{std::}\NormalTok{vector\textless{}length\textgreater{}, }\BuiltInTok{std::}\NormalTok{greater\textless{}length\textgreater{}\textgreater{} }
+\NormalTok{                                                                            pq;}
+\NormalTok{        memset(d, }\BaseNTok{0x3f}\NormalTok{, }\KeywordTok{sizeof}\NormalTok{(ll) * (V + }\DecValTok{1}\NormalTok{)); }\CommentTok{// initializing d[] to INF}
+\NormalTok{        d[s] = }\DecValTok{0}\BuiltInTok{LL}\NormalTok{;}
+\NormalTok{        p[s] = {-}}\DecValTok{1}\NormalTok{;}
+\NormalTok{        pq.push(length(d[s], s));}
+        \ControlFlowTok{while}\NormalTok{ (}\KeywordTok{not}\NormalTok{ pq.empty()) \{}
+\NormalTok{            Vertex u = pq.top().second;}
+\NormalTok{            ll dist = pq.top().first;}
+\NormalTok{            pq.pop();}
+
+            \ControlFlowTok{if}\NormalTok{ (dist \textgreater{} d[u])}
+                \ControlFlowTok{continue}\NormalTok{;}
+
+            \ControlFlowTok{for}\NormalTok{ (Edge e : adj[u]) \{}
+                \KeywordTok{auto}\NormalTok{[v, len] = e;}
+                \ControlFlowTok{if}\NormalTok{ (len + d[u] \textless{} d[v]) \{}
+\NormalTok{                    d[v] = len + d[u];}
+\NormalTok{                    p[v] = u;}
+\NormalTok{                    pq.push(length(d[v], v));}
+\NormalTok{                \}}
+\NormalTok{            \}}
+\NormalTok{        \}}
+\NormalTok{    \}}
+
+    \CommentTok{/**}
+\CommentTok{     * }\AnnotationTok{@brief}\CommentTok{ prints a path from start vertex s to destination vertex t. Also}
+\CommentTok{     * returns a vector container having the path.}
+\CommentTok{     * }
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{s}\CommentTok{ Start vertex s.}
+\CommentTok{     * }\AnnotationTok{@param}\CommentTok{ }\CommentVarTok{t}\CommentTok{ Destination vertex t.}
+\CommentTok{     * }\AnnotationTok{@return}\CommentTok{ std::vector}\KeywordTok{\textless{}Vertex\textgreater{}}\CommentTok{ Vector Container having the correct order }
+\CommentTok{     * of vertices in its path.}
+\CommentTok{     */}
+    \BuiltInTok{std::}\NormalTok{vector\textless{}Vertex\textgreater{} printPath(Vertex s, Vertex t) \{}
+        \BuiltInTok{std::}\NormalTok{vector\textless{}Vertex\textgreater{} path;}
+\NormalTok{        path.reserve(V);}
+        \ControlFlowTok{for}\NormalTok{ (Vertex u = t; u != s; u = p[u]) }
+\NormalTok{            path.push\_back(u);}
+\NormalTok{        path.push\_back(s);}
+        \BuiltInTok{std::}\NormalTok{reverse(path.begin(), path.end());}
+        \ControlFlowTok{for}\NormalTok{ (}\DataTypeTok{int}\NormalTok{ u : path) \{}
+            \BuiltInTok{std::}\NormalTok{cout \textless{}\textless{} u \textless{}\textless{} }\CharTok{\textquotesingle{} \textquotesingle{}}\NormalTok{;}
+\NormalTok{        \}}
+        \BuiltInTok{std::}\NormalTok{cout \textless{}\textless{} }\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{;}
+        \ControlFlowTok{return}\NormalTok{ path;}
+\NormalTok{    \}}
+
+\NormalTok{\};}
+
+\PreprocessorTok{\#endif}
+\end{Highlighting}
+\end{Shaded}
+
+The C++ STL \texttt{std::priority\_queue} uses a binary heap. Therefore,
+the push and pop operations would be \(O(\log V)\).\\
+Hence, the above function \texttt{solveShortestPaths(s)} runs in
+\(O(E \log V)\).
+
+The process of printing is also very simple. The idea is to store the
+parent of destination vertex \(u\), \(p[u]\) in a container and assign
+\(u\) as \(p[u]\). The function \texttt{printPath(s,\ t)} runs in
+\(O(V)\).
+
+\end{document}
