@@ -43,7 +43,7 @@ topoSortUtil(const Graph &G, Vertex u, std::vector<Vertex> &order, std::vector<b
  * if the graph is not an DAG.
  */
 void 
-topologicalSort(const Graph &G, std::string err = "IMPOSSIBLE") {
+topologicalSort(const Graph &G, const std::string& err = "IMPOSSIBLE") {
     int V = G.getV();
     int pos[V + 1]={};
     std::vector<Vertex> topologicalOrdering;
@@ -84,7 +84,7 @@ topologicalSort(const Graph &G, std::string err = "IMPOSSIBLE") {
 ```cpp
 #include "graph.hpp"
 
-void topologicalSort(const Graph &G, std::string err = "IMPOSSIBLE");
+void topologicalSort(const Graph &G, const std::string& err = "IMPOSSIBLE");
 
 int main() {
     Graph G(6, true);
@@ -139,7 +139,7 @@ Below is a implementation of the same in `topoSortUsingKahn.cpp`.  It uses the `
 #include "graph.hpp" 
 
 void
-topologicalSort(const Graph &G, const std::string err = "IMPOSSIBLE") {
+topologicalSort(const Graph &G, const std::string& err = "IMPOSSIBLE") {
     int V = G.getV();
     Vertex inDegree[V + 1]={};
     std::queue<Vertex> Q;

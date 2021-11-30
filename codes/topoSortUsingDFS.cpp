@@ -32,7 +32,7 @@ topoSortUtil(const Graph &G, Vertex u, std::vector<Vertex> &order, std::vector<b
  * if the graph is not an DAG.
  */
 void 
-topologicalSort(const Graph &G, const std::string err = "IMPOSSIBLE") {
+topologicalSort(const Graph &G, const std::string& err = "IMPOSSIBLE") {
     int V = G.getV();
     int pos[V + 1]={};
     std::vector<Vertex> topologicalOrdering;

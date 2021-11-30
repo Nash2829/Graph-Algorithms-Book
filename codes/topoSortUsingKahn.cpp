@@ -11,7 +11,7 @@
  * if the graph is not an DAG.
  */
 void
-topologicalSort(const Graph &G, const std::string err = "IMPOSSIBLE") {
+topologicalSort(const Graph &G, const std::string& err = "IMPOSSIBLE") {
     int V = G.getV();
     Vertex inDegree[V + 1]={};
     std::queue<Vertex> Q;
