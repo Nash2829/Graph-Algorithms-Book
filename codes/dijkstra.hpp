@@ -109,3 +109,5 @@ struct Dijkstra : public weightedGraph {
     }
 
 };
+
+#endif

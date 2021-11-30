@@ -1,3 +1,5 @@
+// graph.hpp
+
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
 
@@ -65,13 +67,30 @@ class weightedGraph {
         }
 
         /**
+         * @brief Gets number of vertices
+         * 
+         * @return Vertex Number of vertices  
+         */
+        inline const Vertex getV() const { return V; }
+
+        /**
+         * @brief Gets the Adj[u] vector
+         * 
+         * @param u Vertex whose adjacency list is needed
+         * @return const std::vector<Edge>& Returns const reference to weightedGraph::adj[u]
+         */
+        inline const std::vector<Edge>& getAdj(int u) const { 
+            return adj[u];
+        }
+
+        /**
          * @brief adds an edge from vertex u to v. If directed is false, also adds an edge 
          *        from v to u.
          * @param u vertex from which edge comes out.
          * @param v vertex to which edge comes in.
          * @param weight the weight of the edge.
          */
-        void addEgde(Vertex u, Vertex v, Vertex weight) {
+        void addEdge(Vertex u, Vertex v, Vertex weight) {
             adj[u].push_back(Edge(v, weight));
             if (not directed) 
                 adj[v].push_back(Edge(u, weight));
@@ -132,12 +151,29 @@ class Graph {
         }
 
         /**
+         * @brief Gets number of vertices
+         * 
+         * @return Vertex Number of vertices  
+         */
+        inline const Vertex getV() const { return V; }
+
+        /**
+         * @brief Gets the Adj[u] vector
+         * 
+         * @param u Vertex whose adjacency list is needed
+         * @return const std::vector<Vertex>& Returns const reference to Graph::adj[u]
+         */
+        inline const std::vector<Vertex>& getAdj(int u) const { 
+            return adj[u];
+        }
+
+        /**
          * @brief adds an edge from vertex u to v. If directed is false, also adds an edge 
          *        from v to u.
          * @param u vertex from which edge comes out.
          * @param v vertex to which edge comes in.
          */
-        void addEgde(Vertex u, Vertex v) {
+        void addEdge(Vertex u, Vertex v) {
             adj[u].push_back(v);
             if (not directed) 
                 adj[v].push_back(u);
